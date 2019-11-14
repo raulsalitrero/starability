@@ -153,7 +153,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-basic > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -340,7 +340,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-slot > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -569,7 +569,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-grow > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -824,7 +824,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-growRotate > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -1075,7 +1075,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-fade > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -1335,7 +1335,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-checkmark > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -1640,7 +1640,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-heart > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -1921,7 +1921,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-heartbeat > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
@@ -2222,7 +2222,7 @@
 
 @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi) {
   .starability-coinFlip > label {
-    background-image: url(../star-regular.svg);
+    background-image: url(../star-solid.svg);
     background-size: 40px auto;
     background-repeat: repeat-x;
   }
