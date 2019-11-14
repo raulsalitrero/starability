@@ -3,9 +3,8 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
-var runSequence = require('run-sequence');
 
-gulp.task('output-css', function() {
+var css = function() {
   return gulp.src('starability-scss/**/*.scss')
   .pipe(sass({outputStyle: 'expanded'}))
   .pipe(autoprefixer())
@@ -20,14 +19,14 @@ gulp.task('output-css', function() {
   }))
   .pipe(cssnano())
   .pipe(gulp.dest('./'));
-});
+};
 
-gulp.task('watch', function() {
-  gulp.watch('starability-scss/**/*.scss', ['output-css']);
-});
+exports.css = css;
 
-gulp.task('default', function(callback) {
-  runSequence(['output-css', 'watch'],
-    callback
-  );
-});
+var watch= function() {
+  gulp.watch('starability-scss/**/*.scss', gulp.series(css));
+};
+
+exports.watch=watch;
+
+exports.default = gulp.series(css,watch);
