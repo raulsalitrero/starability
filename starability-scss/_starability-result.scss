@@ -2,7 +2,9 @@
   position: relative;
   width: $star-count * $star-size;
   height: $star-size;
-  background-image: $img-stars-sprite;
+  background-image: $img-stars-svg;
+  background-size: $star-size auto;
+  background-repeat: repeat-x;
   font-size: 0.1em;
   color: transparent;
 
@@ -12,8 +14,9 @@
     left: 0;
     top: 0;
     height: $star-size;
-    background-image: $img-stars-sprite;
-    background-position: 0 (-$star-size);
+    background-image: $img-stars-checked-svg;
+    background-size: $star-size auto;
+    background-repeat: repeat-x;
   }
 
   $star-count-result: $star-count;
@@ -26,15 +29,5 @@
     }
 
     $star-count-result: $star-count-result - 1;
-  }
-  
-  @media screen and (min-resolution: 192dpi) {
-    background-image: $img-stars-sprite-2x;
-    background-size: $star-size auto;
-
-    &:after {
-      background-image: $img-stars-sprite-2x;
-      background-size: $star-size auto;
-    }
   }
 }

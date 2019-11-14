@@ -16,12 +16,12 @@
 
   > input:checked ~ label,
   > input:focus ~ label {
-    background-position: 0 0;
+    background-image: $img-stars-svg;
   }
 
   > input:checked + label,
   > input:focus + label {
-    background-position: 0 (-$star-size);
+    background-image: $img-stars-checked-svg;
   }
 
   > input[disabled]:hover + label {
@@ -30,11 +30,11 @@
 
   @if ($hover-enabled) {
     > input:not([disabled]):hover ~ label {
-      background-position: 0 0;
+      background-image: $img-stars-svg;
     }
 
     > input:not([disabled]):hover + label {
-      background-position: 0 (-$star-size);
+      background-image: $img-stars-checked-svg;
     }
 
     > input:not([disabled]):hover + label::before {
@@ -52,6 +52,7 @@
     .starability-focus-ring {
       position: absolute;
       left: 0;
+      top:0;
       width: 100%;
       height: $star-size;
       outline: 2px dotted #999;
@@ -73,17 +74,18 @@
     font-size: 0.1em;
     color: transparent;
     cursor: pointer;
-    background-image: $img-stars-sprite;
-    background-repeat: no-repeat;
-    background-position: 0 (-$star-size);
+    background-image: $img-stars-checked-svg;
+    background-repeat: repeat-x;
+    background-size: $star-size auto;
 
     &::before {
       content: '';
       position: absolute;
       display: block;
       height: $star-size;
-      background-image: $img-stars-sprite;
-      background-position: 0 $star-size;
+      background-image: $img-stars-checked-svg;
+      background-size: $star-size auto;
+      background-repeat: repeat-x;
       pointer-events: none;
       opacity: 0;
     }
@@ -106,8 +108,9 @@
     }
 
     @media screen and (min-resolution: 192dpi) {
-      background-image: $img-stars-sprite-2x;
+      background-image: $img-stars-svg;
       background-size: $star-size auto;
+      background-repeat: repeat-x;
     }
   }
 
@@ -145,17 +148,20 @@
   }
 }
 
-@mixin starability-animation-base($img-animated: $img-stars-sprite, $img-animated-2x: $img-stars-sprite-2x) {
+@mixin starability-animation-base($img-animated: $img-stars-svg, $img-animated-2x: $img-stars-svg) {
   content: ' ';
   position: absolute;
   opacity: 0;
   width: $star-size;
   height:  $star-size;
   background-image: $img-animated;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-size: $star-size auto;
+  background-repeat: repeat-x;
 
   @media screen and (min-resolution: 192dpi) {
     background-image: $img-animated-2x;
     background-size: $star-size auto;
+    background-repeat: repeat-x;
   }
 }
